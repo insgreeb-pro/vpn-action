@@ -1,37 +1,26 @@
 {
-  "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0",
-    "shelljs": "^0.8.4",
-    "tail": "^2.2.0"
-  },
   "name": "vpnugm-action",
   "version": "1.0.0",
-  "description": "Connect OpenVPN using Github Actions",
+  "description": "",
   "main": "index.js",
-  "devDependencies": {
-    "@vercel/ncc": "^0.27.0",
-    "eslint": "^7.12.0",
-    "eslint-config-standard": "^15.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.2"
-  },
   "scripts": {
-    "build": "ncc build ./src/main.js -C -o dist/main && ncc build ./src/cleanup.js -C -o dist/post"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/insgreeb-pro/vpn-action.git"
   },
-  "keywords": [
-    "github"
-  ],
-  "author": "mwafa",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/insgreeb-pro/vpn-action/issues"
   },
-  "homepage": "https://github.com/insgreeb-pro/vpn-action#readme"
+  "homepage": "https://github.com/insgreeb-pro/vpn-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@vercel/ncc": "^0.27.0",
+    "shelljs.exec": "^1.1.8"
+  }
 }
