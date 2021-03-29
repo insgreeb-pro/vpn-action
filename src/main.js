@@ -1,4 +1,5 @@
 const exec = require("./exec")
+const core = require("@actions/core")
 const fs = require("fs")
 const Tail = require("tail")
 
