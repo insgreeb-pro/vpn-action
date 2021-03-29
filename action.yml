@@ -1,0 +1,18 @@
+name: "VPN action"
+description: "Connect OpenVPN using Github Action"
+
+inputs:
+  username:
+    description: "Username OpenVPN"
+    required: true
+  password:
+    description: "Password OpenVPN"
+    required: true
+  config:
+    description: "Url to download config file"
+    required: true
+
+runs:
+  using: node12
+  main: src/main.js
+  post: src/cleanup.js

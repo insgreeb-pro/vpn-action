@@ -1,0 +1,23 @@
+name: Connect OpenVPN
+
+on: [push]
+
+jobs:
+  test:
+    name: Test OpenVPN
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: insgreeb-pro/vpn-action@master
+        name: OpenVPN
+        with:
+          username: ${{ secrets.VPN_USER }}
+          password: ${{ secrets.VPN_PASSWORD }}
+          config: ${{ secrets.VPN_FILE }}
+
+      - name: PING
+        run: ping -c 4 10.46.10.20
+
+      - name: kill vpn
+        if: always()
+        run: sudo killall openvpn
