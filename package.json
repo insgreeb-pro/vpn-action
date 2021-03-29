@@ -3,5 +3,28 @@
     "@actions/core": "^1.2.6",
     "shelljs": "^0.8.4",
     "tail": "^2.2.0"
-  }
+  },
+  "name": "vpnugm-action",
+  "version": "1.0.0",
+  "description": "Connect OpenVPN using Github Actions",
+  "main": "index.js",
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0"
+  },
+  "scripts": {
+    "build": "ncc build ./src/main.js -m -o dist/main && ncc build ./src/cleanup.js -o dist/post -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insgreeb-pro/vpn-action.git"
+  },
+  "keywords": [
+    "github"
+  ],
+  "author": "mwafa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/insgreeb-pro/vpn-action/issues"
+  },
+  "homepage": "https://github.com/insgreeb-pro/vpn-action#readme"
 }
