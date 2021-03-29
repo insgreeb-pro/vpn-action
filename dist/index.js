@@ -714,7 +714,7 @@ class Tail extends events.EventEmitter {
 
 }
 
-exports.Tail = Tail
+exports.x = Tail
 
 
 /***/ }),
@@ -778,7 +778,7 @@ if (isPost) {
 const exec = __nccwpck_require__(264)
 const core = __nccwpck_require__(186)
 const fs = __nccwpck_require__(747)
-const Tail = __nccwpck_require__(824)
+const Tail = __nccwpck_require__(824)/* .Tail */ .x
 
 module.exports = () => {
   // installing dependencies
