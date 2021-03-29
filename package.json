@@ -18,7 +18,7 @@
     "eslint-plugin-standard": "^4.0.2"
   },
   "scripts": {
-    "build": "ncc build ./src/main.js -o dist/main && ncc build ./src/cleanup.js -o dist/post"
+    "build": "ncc build ./src/main.js -C -o dist/main && ncc build ./src/cleanup.js -C -o dist/post"
   },
   "repository": {
     "type": "git",
