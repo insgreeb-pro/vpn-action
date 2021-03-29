@@ -21,6 +21,7 @@
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@vercel/ncc": "^0.27.0",
-    "shelljs.exec": "^1.1.8"
+    "shelljs.exec": "^1.1.8",
+    "tail": "^2.2.0"
   }
 }
