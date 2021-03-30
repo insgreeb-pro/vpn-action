@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ncc build src/index.js"
+    "build": "ncc build src/index.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,13 @@
     "@vercel/ncc": "^0.27.0",
     "shelljs.exec": "^1.1.8",
     "tail": "^2.2.0"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build"
+    }
   }
 }
