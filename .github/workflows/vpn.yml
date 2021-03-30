@@ -17,7 +17,3 @@ jobs:
 
       - name: PING
         run: ping -c 4 10.46.10.20
-
-      - name: kill vpn
-        if: always()
-        run: sudo killall openvpn
